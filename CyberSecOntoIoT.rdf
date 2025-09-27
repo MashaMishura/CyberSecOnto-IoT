@@ -22,182 +22,227 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#воздействует -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#affectsCPE -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#воздействует">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#affectsCPE">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CPE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#affectsObject -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#affectsObject">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#вызвана -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#causedByThreat -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#вызвана">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#causedByThreat">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#causedByVulnerability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#causedByVulnerability">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#вызывает_негативные_последствия_для -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#causedNegativeConsequenses -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#вызывает_негативные_последствия_для">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#causedNegativeConsequenses">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Ущерб"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#выполняется -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#direcredTo -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#выполняется">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сценарий"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Средства_реализации_сценария"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#имеет_СФХ -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#имеет_СФХ">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#имеет_возможности -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#имеет_возможности">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Нарушитель"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Возможности_нарушителя"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#имеет_домен -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#имеет_домен">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#имеет_мотив -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#имеет_мотив">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Нарушитель"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Мотив_нарушителя"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#имеет_сценарий -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#имеет_сценарий">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сценарий"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#имеет_цель -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#имеет_цель">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#несет -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#несет">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Ущерб"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#несет_последствия -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#несет_последствия">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Последствия"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#описывается_шаблоном_CAPEC -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#описывается_шаблоном_CAPEC">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#определяется_CVSS-вектором -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#определяется_CVSS-вектором">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVSS-вектор"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#подвержен -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#подвержен">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#приводит_к -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#приводит_к">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#direcredTo">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#реализует -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#exploitedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#реализует">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#exploitedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#exploitsCWE -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#exploitsCWE">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CWE"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#реализуется -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasAttacker -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#реализуется">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasAttacker">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Нарушитель"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#содержит_уязвимость -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCAPEC -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#содержит_уязвимость">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCAPEC">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCPE -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCPE">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CPE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCVSSVector -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCVSSVector">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVSS-вектор"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCWE -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCWE">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CWE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCapabilities -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCapabilities">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Нарушитель"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Возможности_нарушителя"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasConsequence -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasConsequence">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Последствия"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasDomain -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasDomain">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasMotive -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasMotive">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Нарушитель"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Мотив_нарушителя"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasSFC -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasSFC">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasScenario -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasScenario">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сценарий"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasTarget -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasTarget">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasVulnerability -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasVulnerability">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#эксплуатирует -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#leadsToDamage -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#эксплуатирует">
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#leadsToDamage">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Ущерб"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#realizedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#realizedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#targets -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#targets">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#usesTool -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#usesTool">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сценарий"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Средства_реализации_сценария"/>
     </owl:ObjectProperty>
     
 
@@ -213,58 +258,21 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#вероятность_реализации -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lCriticality -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#вероятность_реализации">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#метрика_вероятности_реализации -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#метрика_вероятности_реализации">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#метрика_влияния -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#метрика_влияния">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#метрика_задействованности -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#метрика_задействованности">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#метрика_критичности -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#метрика_критичности">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lCriticality">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#метрика_опасности -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lDanger -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#метрика_опасности">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lDanger">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVSS-вектор"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
@@ -272,49 +280,46 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#метрика_отказоустойчивости -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lFaultTolerance -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#метрика_отказоустойчивости">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lFaultTolerance">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#уровень_влияния -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lImpact -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#уровень_влияния">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lImpact">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#уровень_задействованности -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lInvolvement -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#уровень_задействованности">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lInvolvement">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#уровень_критичности -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mCriticality -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#уровень_критичности">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mCriticality">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#уровень_опасности -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mDanger -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#уровень_опасности">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mDanger">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVSS-вектор"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
@@ -322,11 +327,53 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#уровень_отказоустойчивости -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mFaultTolerance -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#уровень_отказоустойчивости">
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mFaultTolerance">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mImpact -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mImpact">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mInvolvement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mInvolvement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mProbabilityImplementation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mProbabilityImplementation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#probabilityImplementation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#probabilityImplementation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#securityScore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#securityScore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
     </owl:DatatypeProperty>
     
 
@@ -342,9 +389,21 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CPE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CPE"/>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVSS-вектор -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVSS-вектор"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CWE -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CWE"/>
     
 
 
@@ -741,8 +800,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC-10">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-24003_CAPEC-10"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-24003"/>
     </owl:NamedIndividual>
     
 
@@ -751,8 +808,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC-126">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-0694_CAPEC-126"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-0694"/>
     </owl:NamedIndividual>
     
 
@@ -761,8 +816,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC-127">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-1156_CAPEC-127"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-1156"/>
     </owl:NamedIndividual>
     
 
@@ -771,8 +824,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC-129">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-33036_CAPEC-129"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-33036"/>
     </owl:NamedIndividual>
     
 
@@ -781,8 +832,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC-133">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27840_CAPEC-133"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27840"/>
     </owl:NamedIndividual>
     
 
@@ -791,8 +840,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC-15">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-6357_CAPEC-15"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-6357"/>
     </owl:NamedIndividual>
     
 
@@ -801,8 +848,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC-166">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-49115_CAPEC-166"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-49115"/>
     </owl:NamedIndividual>
     
 
@@ -811,8 +856,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC-190">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27840_CAPEC-190"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27840"/>
     </owl:NamedIndividual>
     
 
@@ -821,8 +864,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC-38">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-31480_CAPEC-38"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-31480"/>
     </owl:NamedIndividual>
     
 
@@ -831,7 +872,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC-44">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-24003"/>
     </owl:NamedIndividual>
     
 
@@ -840,8 +880,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC-59">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27615_CAPEC-59"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27615"/>
     </owl:NamedIndividual>
     
 
@@ -850,8 +888,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC-664">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27152_CAPEC-664"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27152"/>
     </owl:NamedIndividual>
     
 
@@ -860,8 +896,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC1">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-1146_CAPEC1"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-1146"/>
     </owl:NamedIndividual>
     
 
@@ -870,8 +904,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC10">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-48467_CAPEC10"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-48467"/>
     </owl:NamedIndividual>
     
 
@@ -880,8 +912,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC11">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-25619_CAPEC11"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-25619"/>
     </owl:NamedIndividual>
     
 
@@ -890,8 +920,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC2">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE1_CAPEC2"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE1"/>
     </owl:NamedIndividual>
     
 
@@ -900,8 +928,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC3">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE2_CAPEC3"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE2"/>
     </owl:NamedIndividual>
     
 
@@ -910,8 +936,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC4">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE3_CAPEC4"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE3"/>
     </owl:NamedIndividual>
     
 
@@ -920,8 +944,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC7">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE4_CAPEC7"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE4"/>
     </owl:NamedIndividual>
     
 
@@ -930,8 +952,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC8">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-6249_CAPEC8"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-6249"/>
     </owl:NamedIndividual>
     
 
@@ -940,8 +960,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CAPEC9">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-        <untitled-ontology-39:реализует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-6786_CAPEC9"/>
-        <untitled-ontology-39:эксплуатирует rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-6786"/>
     </owl:NamedIndividual>
     
 
@@ -966,11 +984,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-25619_CAPEC11">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-25619"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_неконтролируемого_и_непредсказуемого_поведения_устройств_и_систем"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_потери_связи_и_управления_устройствами"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_удаленного_захвата_управления_IoT-устройствами"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_физического_повреждения_или_уничтожения_оборудования_и_компонентов"/>
     </owl:NamedIndividual>
     
 
@@ -987,12 +1000,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-49115_CAPEC-166">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-49115"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_компрометации_приватности_пользователей_и_определения_местоположения"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_неконтролируемого_и_непредсказуемого_поведения_устройств_и_систем"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_ошибок_автоматизированных_решений_из-за_ложных_данных"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_повреждение_окружающей_среды"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_физического_повреждения_или_уничтожения_оборудования_и_компонентов"/>
     </owl:NamedIndividual>
     
 
@@ -1009,11 +1016,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-6249_CAPEC8">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-6249"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_остановки_и_сбоя_производственных_и_бизнес-процессов"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_саботажа_и_манипуляции_управляющими_сигналами"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_снижения_производительности_и_эффективности_работы_систем"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_финансовых_потерь_из-за_простоев_ошибок_и_мошенничества"/>
     </owl:NamedIndividual>
     
 
@@ -1030,12 +1032,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-6357_CAPEC-15">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-6357"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_компрометации_приватности_пользователей_и_определения_местоположения"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_манипуляции_подмены_и_искажения_данных"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_нарушения_доступности_сервисов_и_сетей"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_удаленного_захвата_управления_IoT-устройствами"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_шпионажа_дезинформации_и_саботажа"/>
     </owl:NamedIndividual>
     
 
@@ -1052,10 +1048,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-1156_CAPEC-127">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-1156"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_нарушения_доступности_сервисов_и_сетей"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_нарушения_целостности_и_конфиденциальности_информации"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_потери_связи_и_управления_устройствами"/>
     </owl:NamedIndividual>
     
 
@@ -1072,10 +1064,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-33036_CAPEC-129">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-33036"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_несанкционированного_доступа_к_системам_и_устройствам"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_утечки_конфиденциальных_персональных_и_коммерческих_данных"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_шпионажа_дезинформации_и_саботажа"/>
     </owl:NamedIndividual>
     
 
@@ -1092,10 +1080,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-6786_CAPEC9">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-6786"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_компрометации_приватности_пользователей_и_определения_местоположения"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_компрометации_стратегической_и_критической_информации"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_снижения_производительности_и_эффективности_работы_систем"/>
     </owl:NamedIndividual>
     
 
@@ -1112,9 +1096,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-0694_CAPEC-126">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-0694"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_репутационных_потерь_организаций_и_брендов"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_снижения_производительности_и_эффективности_работы_систем"/>
     </owl:NamedIndividual>
     
 
@@ -1131,9 +1112,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-1146_CAPEC1">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-1146"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_нарушения_целостности_и_конфиденциальности_информации"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_ограничения_или_прекращения_оказания_услуг_и_сервиса"/>
     </owl:NamedIndividual>
     
 
@@ -1150,9 +1128,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-24003_CAPEC-10">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-24003"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_отказов_сбоев_и_простоев_в_работе_IoT-систем"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_перегрузки_сетевых_каналов_и_ресурсов_устройств"/>
     </owl:NamedIndividual>
     
 
@@ -1161,9 +1136,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-24003_CAPEC-44">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-24003"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_внезапных_отключений_и_остановки_критических_процессов"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_распространения_вредоносного_ПО_и_создание_ботнетов"/>
     </owl:NamedIndividual>
     
 
@@ -1180,8 +1152,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27152_CAPEC-664">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27152"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_потери_связи_и_управления_устройствами"/>
     </owl:NamedIndividual>
     
 
@@ -1198,8 +1168,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27615_CAPEC-59">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27615"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_использования_слабых_паролей_и_уязвимостей_протоколов"/>
     </owl:NamedIndividual>
     
 
@@ -1216,10 +1184,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27840_CAPEC-133">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27840"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_остановки_и_сбоя_производственных_и_бизнес-процессов"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_потери_связи_и_управления_устройствами"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_финансовых_потерь_из-за_простоев_ошибок_и_мошенничества"/>
     </owl:NamedIndividual>
     
 
@@ -1228,10 +1192,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27840_CAPEC-190">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27840"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_ограничения_или_прекращения_оказания_услуг_и_сервиса"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_снижения_производительности_и_эффективности_работы_систем"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_увеличения_затрат_на_восстановление_и_безопасность"/>
     </owl:NamedIndividual>
     
 
@@ -1248,8 +1208,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-31480_CAPEC-38">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-31480"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_использования_данных_для_мошенничества_и_социальной_инженерии"/>
     </owl:NamedIndividual>
     
 
@@ -1266,8 +1224,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-48467_CAPEC10">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-48467"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_несанкционированного_доступа_к_системам_и_устройствам"/>
     </owl:NamedIndividual>
     
 
@@ -1284,8 +1240,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE1_CAPEC2">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE1"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_ошибок_автоматизированных_решений_из-за_ложных_данных"/>
     </owl:NamedIndividual>
     
 
@@ -1302,8 +1256,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE2_CAPEC3">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE2"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_неконтролируемого_и_непредсказуемого_поведения_устройств_и_систем"/>
     </owl:NamedIndividual>
     
 
@@ -1320,8 +1272,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE3_CAPEC4">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE3"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_ошибок_автоматизированных_решений_из-за_ложных_данных"/>
     </owl:NamedIndividual>
     
 
@@ -1338,8 +1288,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE4_CAPEC7">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <untitled-ontology-39:вызвана rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE4"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_ошибок_автоматизированных_решений_из-за_ложных_данных"/>
     </owl:NamedIndividual>
     
 
@@ -1372,10 +1320,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#M2M">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Взаимодействие_с_другими_объектами"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>низкий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>высокий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -1424,11 +1368,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Авторизованные_пользователи_систем_и_сетей">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Внутренний"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_возможности_по_реализации_угроз_безопасности"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Желание_самореализации"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Месть"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Неосторожность"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_материальной_или_финансовой_выгоды"/>
     </owl:NamedIndividual>
     
 
@@ -1445,8 +1384,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_возможности_по_реализации_угроз_безопасности">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Возможности_нарушителя"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_возможности_по_реализации_угроз_безопасности"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_материальной_или_финансовой_выгоды"/>
     </owl:NamedIndividual>
     
 
@@ -1463,8 +1400,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Банковская_сфера">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-        <untitled-ontology-39:метрика_критичности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_критичности>
-        <untitled-ontology-39:уровень_критичности>средний</untitled-ontology-39:уровень_критичности>
     </owl:NamedIndividual>
     
 
@@ -1477,13 +1412,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Больница -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Больница">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Бывшие_работники -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Бывшие_работники">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Внешний"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_возможности_по_реализации_угроз_безопасности"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Месть"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_материальной_или_финансовой_выгоды"/>
     </owl:NamedIndividual>
     
 
@@ -1500,8 +1440,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Вооружение">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-        <untitled-ontology-39:метрика_критичности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_критичности>
-        <untitled-ontology-39:уровень_критичности>критичный</untitled-ontology-39:уровень_критичности>
     </owl:NamedIndividual>
     
 
@@ -1556,8 +1494,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Здравоохранение">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-        <untitled-ontology-39:метрика_критичности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_критичности>
-        <untitled-ontology-39:уровень_критичности>критичный</untitled-ontology-39:уровень_критичности>
     </owl:NamedIndividual>
     
 
@@ -1582,9 +1518,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Конкурирующие_организации">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Внешний"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_повышенные_возможности_по_реализации_угроз_безопасности"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_конкуретных_преимуществ"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_материальной_или_финансовой_выгоды"/>
     </owl:NamedIndividual>
     
 
@@ -1601,9 +1534,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Лица_обеспечивающие_функционирование_систем_и_сетей">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Внутренний"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_возможности_по_реализации_угроз_безопасности"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Неосторожность"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_материальной_или_финансовой_выгоды"/>
     </owl:NamedIndividual>
     
 
@@ -1612,10 +1542,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Лица_поставляющие_программноаппаратные_средства_и_системы">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Внешний"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_возможности_по_реализации_угроз_безопасности"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Неосторожность"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_конкуретных_преимуществ"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_материальной_или_финансовой_выгоды"/>
     </owl:NamedIndividual>
     
 
@@ -1662,8 +1588,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Наука">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-        <untitled-ontology-39:метрика_критичности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_критичности>
-        <untitled-ontology-39:уровень_критичности>средний</untitled-ontology-39:уровень_критичности>
     </owl:NamedIndividual>
     
 
@@ -1688,8 +1612,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Образование">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-        <untitled-ontology-39:метрика_критичности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</untitled-ontology-39:метрика_критичности>
-        <untitled-ontology-39:уровень_критичности>низкий</untitled-ontology-39:уровень_критичности>
     </owl:NamedIndividual>
     
 
@@ -1706,9 +1628,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Отдельные_физические_лица">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Внешний"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_возможности_по_реализации_угроз_безопасности"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Желание_самореализации"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_материальной_или_финансовой_выгоды"/>
     </owl:NamedIndividual>
     
 
@@ -1733,7 +1652,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_материальной_или_финансовой_выгоды">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Мотив_нарушителя"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_возможности_по_реализации_угроз_безопасности"/>
     </owl:NamedIndividual>
     
 
@@ -1750,10 +1668,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Поставщики_вычислительных_услуг">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Внутренний"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_повышенные_возможности_по_реализации_угроз_безопасности"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Неосторожность"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_конкуретных_преимуществ"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_материальной_или_финансовой_выгоды"/>
     </owl:NamedIndividual>
     
 
@@ -1762,9 +1676,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Преступные_группы">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Внешний"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_повышенные_возможности_по_реализации_угроз_безопасности"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Желание_самореализации"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_материальной_или_финансовой_выгоды"/>
     </owl:NamedIndividual>
     
 
@@ -1773,10 +1684,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Привлекаемые_для_настройки_и_установки_лица">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Внутренний"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_повышенные_возможности_по_реализации_угроз_безопасности"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Неосторожность"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_конкуретных_преимуществ"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_материальной_или_финансовой_выгоды"/>
     </owl:NamedIndividual>
     
 
@@ -1793,8 +1700,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Промышленность">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-        <untitled-ontology-39:метрика_критичности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_критичности>
-        <untitled-ontology-39:уровень_критичности>высокий</untitled-ontology-39:уровень_критичности>
     </owl:NamedIndividual>
     
 
@@ -1809,11 +1714,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Разработчики_программных_аппаратных_средств">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Внутренний"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Средние_возможности_по_реализации_угроз_безопасности"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Внедрение_дополнительных_функциональных_возможностей"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Неосторожность"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_конкуретных_преимуществ"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_материальной_или_финансовой_выгоды"/>
     </owl:NamedIndividual>
     
 
@@ -1950,7 +1850,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_неконтролируемого_и_непредсказуемого_поведения_устройств_и_систем">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Технические"/>
-        <untitled-ontology-39:приводит_к rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск_ошибок_автоматизированных_решений_из-за_ложных_данных"/>
     </owl:NamedIndividual>
     
 
@@ -2151,8 +2050,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Робототехника_и_передовое_производство">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-        <untitled-ontology-39:метрика_критичности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_критичности>
-        <untitled-ontology-39:уровень_критичности>критичный</untitled-ontology-39:уровень_критичности>
     </owl:NamedIndividual>
     
 
@@ -2161,8 +2058,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Связь">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-        <untitled-ontology-39:метрика_критичности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_критичности>
-        <untitled-ontology-39:уровень_критичности>высокий</untitled-ontology-39:уровень_критичности>
     </owl:NamedIndividual>
     
 
@@ -2171,11 +2066,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Системные_администраторы_и_администраторы_безопасности">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Внутренний"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_повышенные_возможности_по_реализации_угроз_безопасности"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Желание_самореализации"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Месть"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Неосторожность"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Получение_материальной_или_финансовой_выгоды"/>
     </owl:NamedIndividual>
     
 
@@ -2208,9 +2098,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Террористические_группировки">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Внешний"/>
-        <untitled-ontology-39:имеет_возможности rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Средние_возможности_по_реализации_угроз_безопасности"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Дестабилизация_общества"/>
-        <untitled-ontology-39:имеет_мотив rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Совершение_террористических_актов"/>
     </owl:NamedIndividual>
     
 
@@ -2219,8 +2106,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Транспортная_система">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-        <untitled-ontology-39:метрика_критичности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_критичности>
-        <untitled-ontology-39:уровень_критичности>средний</untitled-ontology-39:уровень_критичности>
     </owl:NamedIndividual>
     
 
@@ -2259,8 +2144,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Энергетика">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-        <untitled-ontology-39:метрика_критичности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_критичности>
-        <untitled-ontology-39:уровень_критичности>высокий</untitled-ontology-39:уровень_критичности>
     </owl:NamedIndividual>
     
 
@@ -2269,10 +2152,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#автономный_режим_управления">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>высокий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>высокий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2281,10 +2160,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#актуаторы">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>высокий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2293,10 +2168,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#антивирус">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>высокий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2305,10 +2176,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#аутентификация">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>низкий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>критичный</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2317,10 +2184,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#драйвера">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Микропрограммное_обеспечение"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>средний</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>высокий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2329,10 +2192,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#искусственный_интеллект">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>высокий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2341,12 +2200,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#клиентское_ПО">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Прикладное_ПО"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27152"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-31480"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости>средний</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>низкий</untitled-ontology-39:уровень_задействованности>
     </owl:NamedIndividual>
     
 
@@ -2355,10 +2208,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#контроль_доступа">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>низкий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2367,10 +2216,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#криптографическая_система">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>средний</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>высокий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2379,10 +2224,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#межсетевой_экран">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>высокий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2391,10 +2232,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#микропрограммные_средства">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Микропрограммное_обеспечение"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>средний</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2403,10 +2240,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#носитель_информации">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>низкий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>высокий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2415,10 +2248,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#облачная_инфраструктура">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>критичный</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>высокий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2427,10 +2256,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#память">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>средний</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2439,15 +2264,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сенсоры">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-49115"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-1146"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE1"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE3"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE4"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>низкий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>высокий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2456,10 +2272,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#серверное_ПО">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Прикладное_ПО"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>высокий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2468,10 +2280,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевое_питание">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>критичный</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2480,10 +2288,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевое_средство">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>высокий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2492,10 +2296,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевые_интерфейсы">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>средний</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2504,16 +2304,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевые_протоколы">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-25619"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-1156"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-6786"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-24003"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27615"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-48467"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>средний</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2522,10 +2312,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевые_сервисы">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>средний</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>высокий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2534,10 +2320,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_доверительного_управления">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>средний</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>высокий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2546,10 +2328,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_общего_назначения">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Системное_ПО"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>критичный</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2558,10 +2336,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_реального_времени">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Системное_ПО"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>критичный</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2570,10 +2344,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_управления_без_обратной_связи">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>средний</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>высокий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2582,10 +2352,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_управления_с_обратной_связью">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>критичный</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>высокий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2594,10 +2360,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#системы_взаимодействия_с_пользователем">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Взаимодействие_с_другими_объектами"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>средний</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2606,10 +2368,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#средство_защиты">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>критичный</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>высокий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2618,10 +2376,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#туманные_вычисления">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>критичный</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2630,10 +2384,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#управление_активами">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>низкий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2642,10 +2392,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#физическая_и_инструментальная_безопасность">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>критичный</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>критичный</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2654,8 +2400,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Организации,_обеспечивающие_взаимодействие_систем_и_сетей">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-        <untitled-ontology-39:метрика_критичности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_критичности>
-        <untitled-ontology-39:уровень_критичности>высокий</untitled-ontology-39:уровень_критичности>
     </owl:NamedIndividual>
     
 
@@ -2672,10 +2416,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#авторизация,_идентификация">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>низкий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>критичный</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2684,10 +2424,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#аккумулятор,_другие_вспомогательные_блоки,_шины_данных">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>высокий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>низкий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2696,11 +2432,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#интерфейсы_ввода/вывода">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2024-33036"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.2</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>низкий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2709,14 +2440,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#контроллеры,_процессоры">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-6249"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2023-6357"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-0694"/>
-        <untitled-ontology-39:содержит_уязвимость rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVE-2025-27840"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>критичный</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>средний</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
     
 
@@ -2725,10 +2448,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#обнаружения_вторжений,_предупреждение">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-        <untitled-ontology-39:метрика_задействованности rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_задействованности>
-        <untitled-ontology-39:метрика_отказоустойчивости rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.8</untitled-ontology-39:метрика_отказоустойчивости>
-        <untitled-ontology-39:уровень_задействованности>высокий</untitled-ontology-39:уровень_задействованности>
-        <untitled-ontology-39:уровень_отказоустойчивости>высокий</untitled-ontology-39:уровень_отказоустойчивости>
     </owl:NamedIndividual>
 </rdf:RDF>
 
