@@ -14,7 +14,7 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
-    // Object Properties
+    // Datatypes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
@@ -22,12 +22,34 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#affectsCPE -->
+    <!-- http://www.w3.org/2001/XMLSchema#float -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#affectsCPE">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CPE"/>
-    </owl:ObjectProperty>
+    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#float">
+        <owl:equivalentClass>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
     
 
 
@@ -67,6 +89,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#connectsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#connectsTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#depends_on -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#depends_on">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#direcredTo -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#direcredTo">
@@ -81,15 +121,6 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#exploitedBy">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#exploitsCWE -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#exploitsCWE">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CWE"/>
     </owl:ObjectProperty>
     
 
@@ -112,29 +143,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCPE -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCPE">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CPE"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCVSSVector -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCVSSVector">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVSS-вектор"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCWE -->
-
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCWE">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CWE"/>
     </owl:ObjectProperty>
     
 
@@ -166,11 +179,38 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasDst -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasDst">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сообщения"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasGoal -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasGoal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель_системы"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasMotive -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasMotive">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Нарушитель"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Мотив_нарушителя"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasPurpose -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasPurpose">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сообщения"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Назначение"/>
     </owl:ObjectProperty>
     
 
@@ -189,6 +229,15 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasScenario">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сценарий"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasSrc -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasSrc">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сообщения"/>
     </owl:ObjectProperty>
     
 
@@ -229,6 +278,42 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#realizedBySFC -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#realizedBySFC">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель_системы"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#receivesFrom -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#receivesFrom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsControlCommandsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsControlCommandsTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsDataTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsDataTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#targets -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#targets">
@@ -258,14 +343,70 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasControlType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasControlType">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Актуаторы"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:pattern>PWM|Digital</xsd:pattern>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCurrentConsumptionMax -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasCurrentConsumptionMax">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Актуаторы"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasSupplyVoltageMax -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#hasSupplyVoltageMax">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Актуаторы"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                <owl:withRestrictions rdf:parseType="Collection">
+                    <rdf:Description>
+                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</xsd:minInclusive>
+                    </rdf:Description>
+                    <rdf:Description>
+                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</xsd:maxInclusive>
+                    </rdf:Description>
+                </owl:withRestrictions>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lCriticality -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lCriticality">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
     </owl:DatatypeProperty>
     
 
@@ -273,9 +414,7 @@
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lDanger -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lDanger">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVSS-вектор"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
     </owl:DatatypeProperty>
     
 
@@ -291,8 +430,7 @@
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lImpact -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lImpact">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Ущерб"/>
     </owl:DatatypeProperty>
     
 
@@ -305,14 +443,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lProbabilityImplementation -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lProbabilityImplementation">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lcriticalityForGoal -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#lcriticalityForGoal">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель_системы"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mCriticality -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mCriticality">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Риск"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
     </owl:DatatypeProperty>
     
 
@@ -320,8 +470,6 @@
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mDanger -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mDanger">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVSS-вектор"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
     </owl:DatatypeProperty>
     
@@ -338,8 +486,7 @@
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mImpact -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mImpact">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Ущерб"/>
     </owl:DatatypeProperty>
     
 
@@ -356,16 +503,6 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#mProbabilityImplementation">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#probabilityImplementation -->
-
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#probabilityImplementation">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
     </owl:DatatypeProperty>
     
 
@@ -389,21 +526,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CPE -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CPE"/>
-    
-
-
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVSS-вектор -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVSS-вектор"/>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CWE -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CWE"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CVSS-вектор">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
+    </owl:Class>
     
 
 
@@ -411,6 +538,20 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Hardware">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#M2M -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#M2M">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Взаимодействие_с_другими_объектами"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsDataTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Облачная_инфраструктура"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -431,10 +572,48 @@
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратная -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Автономная_работа_и_автоматизация -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратная">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Автономная_работа_и_автоматизация">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель_системы"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Автономный_режим -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Автономный_режим">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Актуаторы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Актуаторы">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#receivesFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Питание"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аналитика -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аналитика">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Назначение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Антивирус -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Антивирус">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
     </owl:Class>
     
 
@@ -450,6 +629,14 @@
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аутентификация -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аутентификация">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
+    </owl:Class>
     
 
 
@@ -512,7 +699,7 @@
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Возможности_нарушителя -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Возможности_нарушителя">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Нарушитель"/>
     </owl:Class>
     
 
@@ -535,7 +722,39 @@
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Домен">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Драйвера -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Драйвера">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Микропрограммное_обеспечение"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#depends_on"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Контроллеры,_процессоры"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#ИИ -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#ИИ">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Информационные_сообщения -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Информационные_сообщения">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сообщения"/>
+    </owl:Class>
     
 
 
@@ -543,6 +762,22 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Канал_поставок">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Клиентское_ПО -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Клиентское_ПО">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Прикладное_ПО"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Команды_управления -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Команды_управления">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сообщения"/>
     </owl:Class>
     
 
@@ -563,6 +798,38 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Контроль -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Контроль">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Назначение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Контроль_доступа -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Контроль_доступа">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Криптографическая_система -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Криптографическая_система">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Межсетевой_экран -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Межсетевой_экран">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Микропрограммное_обеспечение -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Микропрограммное_обеспечение">
@@ -571,15 +838,91 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Микропрограммный_средства -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Микропрограммный_средства">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Микропрограммное_обеспечение"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#depends_on"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Контроллеры,_процессоры"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Монитор -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Монитор">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Назначение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Мониторинг -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Мониторинг">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель_системы"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Мотив_нарушителя -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Мотив_нарушителя"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Мотив_нарушителя">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Нарушитель"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Назначение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Назначение"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Нарушитель -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Нарушитель"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Нарушитель">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Носитель_информации -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Носитель_информации">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Обеспечение_прослеживаемости_и_уникальной_идентификации_объектов -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Обеспечение_прослеживаемости_и_уникальной_идентификации_объектов">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель_системы"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Облачная_инфраструктура -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Облачная_инфраструктура">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsDataTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Клиентское_ПО"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsDataTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Серверно_ПО"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -597,6 +940,22 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Оповещения -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Оповещения">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сообщения"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Оптимизация_процессов_и_снижение_эксплуатационных_расходов -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Оптимизация_процессов_и_снижение_эксплуатационных_расходов">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель_системы"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#ПО -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#ПО">
@@ -605,9 +964,35 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Память -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Память">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Питание -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Питание">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Последствия -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Последствия"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Последствия">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Предиктивная_аналитика_и_предотвращение_отказов -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Предиктивная_аналитика_и_предотвращение_отказов">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель_системы"/>
+    </owl:Class>
     
 
 
@@ -615,14 +1000,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Прикладное_ПО">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Программная -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Программная">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
     </owl:Class>
     
 
@@ -635,14 +1012,50 @@
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
+    </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевая -->
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сбор_и_передача_больших_данных_для_принятия_решений -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевая">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уязвимость"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сбор_и_передача_больших_данных_для_принятия_решений">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель_системы"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сенсоры -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сенсоры">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsDataTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#M2M"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsDataTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Облачная_инфраструктура"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsDataTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Контроллеры,_процессоры"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Серверно_ПО -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Серверно_ПО">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Прикладное_ПО"/>
     </owl:Class>
     
 
@@ -655,10 +1068,84 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_средство -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_средство">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#connectsTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Облачная_инфраструктура"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsDataTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Серверно_ПО"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_интерфейсы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_интерфейсы">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_протоколы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_протоколы">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_сервисы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_сервисы">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_доверительного_управления -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_доверительного_управления">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsControlCommandsTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Контроллеры,_процессоры"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_общего_назначения -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_общего_назначения">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Системное_ПО"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_реального_времени -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_реального_времени">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Системное_ПО"/>
     </owl:Class>
     
 
@@ -671,11 +1158,41 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления_без_обратной_связи -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления_без_обратной_связи">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления_с_обратной_связью -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления_с_обратной_связью">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Системное_ПО -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Системное_ПО">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#СФХ"/>
     </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Систсемы_взаимодействия_с_пользователем -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Систсемы_взаимодействия_с_пользователем">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Взаимодействие_с_другими_объектами"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сообщения -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сообщения"/>
     
 
 
@@ -689,13 +1206,25 @@
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Средства_реализации_сценария -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Средства_реализации_сценария"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Средства_реализации_сценария">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сценарий"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Средство_защиты -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Средство_защиты">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сценарий -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сценарий"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сценарий">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+    </owl:Class>
     
 
 
@@ -707,9 +1236,53 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Туманные_вычисления -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Туманные_вычисления">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsControlCommandsTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Контроллеры,_процессоры"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsDataTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Облачная_инфраструктура"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уведомление -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Уведомление">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Назначение"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Угроза"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Управление_активами -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Управление_активами">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Управление_и_воздействие_на_физический_мир -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Управление_и_воздействие_на_физический_мир">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель_системы"/>
+    </owl:Class>
     
 
 
@@ -733,15 +1306,121 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Физическая_и_интсрументальная_безопасность -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Физическая_и_интсрументальная_безопасность">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель_системы -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель_системы">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Шаблон_CAPEC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Атака"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Авторизация,_идентификация -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Авторизация,_идентификация">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аккумуляторы,_другие_вспомогательные_блоки,_шины_данных -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аккумуляторы,_другие_вспомогательные_блоки,_шины_данных">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Измерения_(данные_с_датчиков) -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Измерения_(данные_с_датчиков)">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сообщения"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Интерфейсы_ввода/вывода -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Интерфейсы_ввода/вывода">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Контроллеры,_процессоры -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Контроллеры,_процессоры">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#connectsTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Носитель_информации"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#connectsTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Память"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#receivesFrom"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Питание"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsControlCommandsTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Актуаторы"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#sendsDataTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#M2M"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Обнаружение_вторжений,_предупреждение -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Обнаружение_вторжений,_предупреждение">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Удалённый_доступ,_контроль_и_управление -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Удалённый_доступ,_контроль_и_управление">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель_системы"/>
+    </owl:Class>
     
 
 
@@ -772,6 +1451,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#AMQP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#AMQP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_протоколы"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#AR -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#AR">
@@ -784,6 +1471,14 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#AV">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_метрики"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#BLE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#BLE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_протоколы"/>
     </owl:NamedIndividual>
     
 
@@ -1292,10 +1987,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CoAP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#CoAP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_протоколы"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#E -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#E">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Временные_метрики"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#HTTP -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#HTTP">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_протоколы"/>
     </owl:NamedIndividual>
     
 
@@ -1316,10 +2027,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#LoRa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#LoRa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_протоколы"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#M2M -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#M2M">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Взаимодействие_с_другими_объектами"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#M2M"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#MQTT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#MQTT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_протоколы"/>
     </owl:NamedIndividual>
     
 
@@ -1360,6 +2085,38 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#UI">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Базовые_метрики"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#WebSocket -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#WebSocket">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_протоколы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Wi-Fi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Wi-Fi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_протоколы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Z-Wave -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Z-Wave">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_протоколы"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Zigbee -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Zigbee">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевые_протоколы"/>
     </owl:NamedIndividual>
     
 
@@ -1408,14 +2165,6 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Безопасность">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Цель"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Больница -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Больница">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Объект"/>
     </owl:NamedIndividual>
     
 
@@ -2150,249 +2899,127 @@
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#автономный_режим_управления -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#автономный_режим_управления">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#актуаторы -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#актуаторы">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#автономный_режим_управления"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#антивирус -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#антивирус">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#антивирус"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#аутентификация -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#аутентификация">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#аутентификация"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#драйвера -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#драйвера">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Микропрограммное_обеспечение"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#драйвера"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#искусственный_интеллект -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#искусственный_интеллект">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#искусственный_интеллект"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#клиентское_ПО -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#клиентское_ПО">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Прикладное_ПО"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#клиентское_ПО"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#контроль_доступа -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#контроль_доступа">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#контроль_доступа"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#криптографическая_система -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#криптографическая_система">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#криптографическая_система"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#межсетевой_экран -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#межсетевой_экран">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#межсетевой_экран"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#микропрограммные_средства -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#микропрограммные_средства">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Микропрограммное_обеспечение"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#носитель_информации -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#носитель_информации">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#облачная_инфраструктура -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#облачная_инфраструктура">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#память -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#память">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сенсоры -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сенсоры">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#микропрограммные_средства"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#серверное_ПО -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#серверное_ПО">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Прикладное_ПО"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевое_питание -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевое_питание">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевое_средство -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевое_средство">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевые_интерфейсы -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевые_интерфейсы">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевые_протоколы -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевые_протоколы">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевые_сервисы -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#сетевые_сервисы">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Сетевое_обеспечение"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#серверное_ПО"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_доверительного_управления -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_доверительного_управления">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_доверительного_управления"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_общего_назначения -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_общего_назначения">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Системное_ПО"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_общего_назначения"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_реального_времени -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_реального_времени">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Системное_ПО"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_реального_времени"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_управления_без_обратной_связи -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_управления_без_обратной_связи">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_управления_без_обратной_связи"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_управления_с_обратной_связью -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_управления_с_обратной_связью">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#система_управления_с_обратной_связью"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#системы_взаимодействия_с_пользователем -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#системы_взаимодействия_с_пользователем">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Взаимодействие_с_другими_объектами"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#системы_взаимодействия_с_пользователем"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#средство_защиты -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#средство_защиты">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#средство_защиты"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#туманные_вычисления -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#туманные_вычисления">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_управления"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#туманные_вычисления"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#управление_активами -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#управление_активами">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#управление_активами"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#физическая_и_инструментальная_безопасность -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#физическая_и_инструментальная_безопасность">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#физическая_и_инструментальная_безопасность"/>
     
 
 
@@ -2414,41 +3041,13 @@
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#авторизация,_идентификация -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#авторизация,_идентификация">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#аккумулятор,_другие_вспомогательные_блоки,_шины_данных -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#аккумулятор,_другие_вспомогательные_блоки,_шины_данных">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#интерфейсы_ввода/вывода -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#интерфейсы_ввода/вывода">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#контроллеры,_процессоры -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#контроллеры,_процессоры">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Аппаратное_обеспечение"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#авторизация,_идентификация"/>
     
 
 
     <!-- http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#обнаружения_вторжений,_предупреждение -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#обнаружения_вторжений,_предупреждение">
-        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#Система_безопасности"/>
-    </owl:NamedIndividual>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2025/6/untitled-ontology-39#обнаружения_вторжений,_предупреждение"/>
 </rdf:RDF>
 
 
