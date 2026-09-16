@@ -1,0 +1,522 @@
+# # Модуль количественной оценки защищённости систем Интернета вещей
+# **На основе размеченной онтологической модели (логический вывод выполнен в Protege)**
+# Реализация алгоритма по формулам (2.1)-(2.19)
+
+# ## 1. Установка и импорт библиотек
+
+# Установка необходимых библиотек
+import subprocess
+import sys
+
+packages = ['owlready2', 'pandas', 'numpy', 'matplotlib', 'plotly']
+for pkg in packages:
+    try:
+        __import__(pkg)
+    except ImportError:
+        print(f"Установка {pkg}...")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", pkg])
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from owlready2 import *
+import warnings
+warnings.filterwarnings('ignore')
+
+# ## 2. Константы
+
+# Диапазон нормализации
+MIN_SCORE = 0.2
+MAX_SCORE = 1.0
+
+# Веса для формулы (2.19)
+ALPHA_W = 0.75
+BETA_W = 0.25
+
+# Коэффициент усиления входящих дуг (формулы 2.5, 2.7)
+ALPHA_IN = 1.2
+
+# Веса типов связей (формулы 2.4-2.7)
+WEIGHT_RELATIONS = {
+    'connectsTo': 0.8,
+    'sendsDataTo': 1.0,
+    'controls': 1.2,
+    'uses_protocol': 0.6
+}
+
+WEIGHT_MESSAGES = {
+    'measurement': 0.5,
+    'info': 0.7,
+    'command': 1.2,
+    'alert': 0.9
+}
+
+# Границы категорий (после нормализации)
+CATEGORY_BOUNDARIES = {
+    'Низкий': (0.2, 0.38),
+    'Средний': (0.38, 0.58),
+    'Высокий': (0.58, 0.82),
+    'Критичный': (0.82, 1.0)
+}
+
+# ## 3. Функции нормализации
+
+def normalize_score(value, min_val=0.0, max_val=1.0):
+    """
+    Минимаксная нормализация (формула 2.1)
+    """
+    if max_val == min_val:
+        return MIN_SCORE
+    normalized = MIN_SCORE + (value - min_val) / (max_val - min_val) * (MAX_SCORE - MIN_SCORE)
+    return max(MIN_SCORE, min(MAX_SCORE, normalized))
+
+def get_category(value):
+    """Определение категории по значению"""
+    for level, (low, high) in CATEGORY_BOUNDARIES.items():
+        if low <= value <= high:
+            return level
+    return "Не определено"
+
+# ## 4. Загрузка и извлечение данных из онтологии
+
+# Путь к размеченному OWL-файлу (после работы резонера в Protege)
+ONTOLOGY_PATH = "ontology_inferred.owl"
+
+# Загрузка онтологии
+print("Загрузка онтологии...")
+onto = get_ontology(ONTOLOGY_PATH).load()
+print(f"Загружено. Классов: {len(list(onto.classes()))}, Индивидов: {len(list(onto.individuals()))}")
+
+# ### 4.1 Вспомогательные функции
+
+def get_prop_value(individual, prop_name):
+    """Получение значения свойства данных"""
+    for prop in individual.get_properties():
+        if prop_name in str(prop):
+            if individual[prop]:
+                return float(individual[prop][0])
+    raise ValueError(f"Свойство {prop_name} не найдено у {individual}")
+
+def get_relations(individual, onto, is_incoming=False):
+    """Получение связей"""
+    relations = {}
+    for prop in onto.object_properties():
+        prop_str = str(prop)
+        if 'sendsDataTo' in prop_str or 'controls' in prop_str or 'connectsTo' in prop_str:
+            rel_type = prop_str.split('#')[-1]
+            weight = WEIGHT_RELATIONS.get(rel_type, 0.5)
+            if is_incoming:
+                for source in onto.individuals():
+                    if individual in source[prop]:
+                        relations[str(source)] = weight
+            else:
+                for target in individual[prop]:
+                    relations[str(target)] = weight
+    return relations
+
+def get_related(individual, relation_name):
+    """Получение связанных индивидов"""
+    results = []
+    for prop in individual.get_properties():
+        if relation_name in str(prop):
+            for target in individual[prop]:
+                results.append(str(target))
+    return results
+
+# ### 4.2 Извлечение СФХ
+
+# Поиск класса SFX
+sfx_class = None
+for cls in onto.classes():
+    if 'SFX' in str(cls):
+        sfx_class = cls
+        break
+
+sfx_data = {}
+for ind in sfx_class.instances():
+    sfx_id = str(ind)
+    sfx_name = sfx_id.split('#')[-1] if '#' in sfx_id else sfx_id
+    
+    # Извлечение свойств из онтологии
+    involvement = get_prop_value(ind, 'hasInvolvement')
+    fault_tolerance = get_prop_value(ind, 'hasFaultTolerance')
+    
+    # Связи
+    incoming_rels = get_relations(ind, onto, is_incoming=True)
+    outgoing_rels = get_relations(ind, onto, is_incoming=False)
+    
+    # Цели
+    goals = get_related(ind, 'hasGoal')
+    
+    # Связанные СФХ
+    related_sfx = []
+    for prop in onto.object_properties():
+        if 'connectsTo' in str(prop) or 'sendsDataTo' in str(prop):
+            for target in ind[prop]:
+                related_sfx.append(str(target))
+    
+    sfx_data[sfx_id] = {
+        'id': sfx_id,
+        'name': sfx_name,
+        'involvement': involvement,
+        'fault_tolerance': fault_tolerance,
+        'goals': goals,
+        'related_sfx': related_sfx,
+        'incoming_relations': incoming_rels,
+        'outgoing_relations': outgoing_rels,
+        # Рассчитываемые показатели
+        'S_SFC': 0.0,
+        'I_sfc': 0.0
+    }
+
+print(f"Извлечено СФХ: {len(sfx_data)}")
+for sfx_id, data in sfx_data.items():
+    print(f"  - {data['name']}: involvement={data['involvement']}, FT={data['fault_tolerance']}")
+
+# ### 4.3 Извлечение уязвимостей
+
+vuln_class = None
+for cls in onto.classes():
+    if 'Vulnerability' in str(cls):
+        vuln_class = cls
+        break
+
+vuln_data = {}
+for ind in vuln_class.instances():
+    vuln_id = str(ind)
+    vuln_data[vuln_id] = {
+        'id': vuln_id,
+        'name': get_prop_value(ind, 'hasName'),
+        'danger_score': get_prop_value(ind, 'hasDangerScore'),
+        'cve': get_prop_value(ind, 'hasCVE') if hasattr(ind, 'hasCVE') else '',
+        'cwe': get_prop_value(ind, 'hasCWE') if hasattr(ind, 'hasCWE') else '',
+        'affected_sfx': get_related(ind, 'affects_sfx')
+    }
+
+print(f"Извлечено уязвимостей: {len(vuln_data)}")
+
+# %% [markdown]
+# ### 4.4 Извлечение атак
+
+attack_class = None
+for cls in onto.classes():
+    if 'AttackPattern' in str(cls):
+        attack_class = cls
+        break
+
+attack_data = {}
+for ind in attack_class.instances():
+    attack_id = str(ind)
+    attack_data[attack_id] = {
+        'id': attack_id,
+        'name': get_prop_value(ind, 'hasName'),
+        'likelihood': get_prop_value(ind, 'hasLikelihood'),
+        'severity': get_prop_value(ind, 'hasSeverity'),
+        'similarity': get_prop_value(ind, 'hasSimilarity') if hasattr(ind, 'hasSimilarity') else 0.0,
+        'related_weaknesses': get_related(ind, 'exploits_weakness'),
+        'S_Attack': 0.0  # будет рассчитано
+    }
+
+print(f"Извлечено атак: {len(attack_data)}")
+
+# ### 4.5 Извлечение угроз
+
+threat_class = None
+for cls in onto.classes():
+    if 'Threat' in str(cls):
+        threat_class = cls
+        break
+
+threat_data = {}
+for ind in threat_class.instances():
+    threat_id = str(ind)
+    threat_data[threat_id] = {
+        'id': threat_id,
+        'name': get_prop_value(ind, 'hasName'),
+        'description': get_prop_value(ind, 'hasDescription') if hasattr(ind, 'hasDescription') else '',
+        'target_sfx': get_related(ind, 'targets_sfx'),
+        'conf_impact': int(get_prop_value(ind, 'hasConfImpact')) if hasattr(ind, 'hasConfImpact') else 0,
+        'int_impact': int(get_prop_value(ind, 'hasIntImpact')) if hasattr(ind, 'hasIntImpact') else 0,
+        'avail_impact': int(get_prop_value(ind, 'hasAvailImpact')) if hasattr(ind, 'hasAvailImpact') else 0,
+        'S_T': 0.0  # будет рассчитано
+    }
+
+print(f"Извлечено угроз: {len(threat_data)}")
+
+# ### 4.6 Извлечение контекстных параметров
+
+domain_criticality = 0.5
+for cls in onto.classes():
+    if 'Domain' in str(cls):
+        for ind in cls.instances():
+            domain_criticality = get_prop_value(ind, 'hasCriticalityScore')
+        break
+
+goal_criticality = 0.5
+for cls in onto.classes():
+    if 'Goal' in str(cls):
+        for ind in cls.instances():
+            goal_criticality = get_prop_value(ind, 'hasCriticalityScore')
+        break
+
+print(f"Критичность домена (S_D): {domain_criticality}")
+print(f"Критичность цели (S_G): {goal_criticality}")
+
+# ## 5. Расчет показателей
+
+print("\n" + "="*60)
+print("ШАГ 1: Базовая оценка объекта (формулы 2.3-2.9)")
+print("="*60)
+
+# --- 5.1 Расчет задействованности СФХ (формулы 2.4-2.8) ---
+for sfx_id, sfx in sfx_data.items():
+    # Исходящие прямые связи (2.4)
+    Out_R = sum(sfx['outgoing_relations'].values())
+    
+    # Входящие прямые связи (2.5)
+    In_R = ALPHA_IN * sum(sfx['incoming_relations'].values())
+    
+    # Исходящие сообщения (2.6)
+    Out_M = 0  # Если есть сообщения в онтологии
+    In_M = 0   # Если есть сообщения в онтологии
+    
+    # Полный показатель задействованности (2.8)
+    I_sfc = Out_R + In_R + Out_M + In_M
+    sfx['I_sfc'] = normalize_score(I_sfc / 10.0)
+    
+    # Опасность СФХ (2.3)
+    S_SFC = sfx['I_sfc'] * (1 - sfx['fault_tolerance'])
+    sfx['S_SFC'] = S_SFC
+    
+    print(f"{sfx['name']}: I={sfx['I_sfc']:.3f}, S_SFC={S_SFC:.3f}")
+
+# --- 5.2 Максимальная опасность СФХ ---
+S_SFC_max = max(sfx['S_SFC'] for sfx in sfx_data.values())
+print(f"\nМаксимальная опасность СФХ (S_SFC_max): {S_SFC_max:.3f}")
+
+# --- 5.3 Уровень критичности объекта (2.9) ---
+S_Object = 0.2 + ((domain_criticality + goal_criticality) / 1.6) * S_SFC_max
+S_Object = normalize_score(S_Object)
+print(f"Уровень критичности объекта (S_Object): {S_Object:.3f}")
+
+# ## 6. Оценка уязвимостей (формула 2.10)
+
+print("\n" + "="*60)
+print("ШАГ 2: Оценка уязвимостей (формула 2.10)")
+print("="*60)
+
+for vuln_id, vuln in vuln_data.items():
+    # Нормализация внешней оценки в диапазон [0.2, 1.0]
+    vuln['danger_score'] = normalize_score(vuln['danger_score'] / 10.0)
+    print(f"{vuln['name']}: S_Vulnerability={vuln['danger_score']:.3f}")
+
+# ## 7. Оценка атак (формулы 2.11-2.14)
+
+print("\n" + "="*60)
+print("ШАГ 3: Оценка атак (формулы 2.11-2.14)")
+print("="*60)
+
+# --- 7.1 Критичность атак (2.11) ---
+for attack_id, attack in attack_data.items():
+    S_Attack = attack['likelihood'] * attack['severity']
+    
+    # Интерпретация для высоковлияющих атак
+    if attack['severity'] >= 0.82:
+        S_Attack = attack['severity']
+    
+    attack['S_Attack'] = normalize_score(S_Attack)
+    print(f"{attack['name']}: S_Attack={attack['S_Attack']:.3f}")
+
+# --- 7.2 Расчет распространения атак (2.12-2.14) ---
+print("\nРаспространение атак между компонентами:")
+
+# Построение взвешенного графа
+max_weight = 0.0
+edge_weights = {}
+
+for sfx_id, sfx in sfx_data.items():
+    for target_id in sfx['related_sfx']:
+        weight = sfx['outgoing_relations'].get(target_id, 0)
+        edge_weights[(sfx_id, target_id)] = weight
+        if weight > max_weight:
+            max_weight = weight
+
+# Вероятности перехода (2.12)
+prop_attacks = {}
+for (src, dst), weight in edge_weights.items():
+    if max_weight > 0:
+        p_prop = weight / max_weight
+        prop_attacks[(src, dst)] = p_prop
+        print(f"  {src} -> {dst}: p_prop={p_prop:.3f}")
+
+# ## 8. Оценка угроз (формулы 2.15-2.17)
+
+print("\n" + "="*60)
+print("ШАГ 4: Оценка угроз (формулы 2.15-2.17)")
+print("="*60)
+
+for threat_id, threat in threat_data.items():
+    S_T_values = []
+    
+    for sfx_id in threat['target_sfx']:
+        if sfx_id not in sfx_data:
+            continue
+        
+        sfx = sfx_data[sfx_id]
+        S_G = goal_criticality
+        S_SFC = sfx['S_SFC']
+        
+        # Находим уязвимости для этой СФХ
+        vulns_for_sfx = [v for v in vuln_data.values() if sfx_id in v['affected_sfx']]
+        
+        if not vulns_for_sfx:
+            continue
+        
+        for vuln in vulns_for_sfx:
+            S_Vuln = vuln['danger_score']
+            
+            # Находим атаки, связанные с этой уязвимостью
+            attacks_for_vuln = [a for a in attack_data.values() 
+                               if any(w in a['related_weaknesses'] for w in [vuln['cwe']])]
+            
+            # Вероятностная составляющая
+            if attacks_for_vuln:
+                prob = 1 - np.prod([1 - a['S_Attack'] for a in attacks_for_vuln])
+            else:
+                prob = 0
+            
+            # Уровень опасности угрозы (2.15)
+            S_T = S_G * S_SFC * S_Vuln * prob
+            S_T_values.append(S_T)
+    
+    # Агрегация угроз для СФХ (2.16) - используется max
+    threat['S_T'] = max(S_T_values) if S_T_values else 0
+    threat['S_T'] = normalize_score(threat['S_T'])
+    
+    print(f"{threat['name']}: S_T={threat['S_T']:.3f}")
+
+# Интегральный уровень опасности угроз (2.17)
+S_Threat = max(threat['S_T'] for threat in threat_data.values()) if threat_data else 0
+print(f"\nИнтегральный уровень опасности угроз (S_Threat): {S_Threat:.3f}")
+
+# ## 9. Оценка рисков (формула 2.18)
+
+print("\n" + "="*60)
+print("ШАГ 5: Оценка рисков (формула 2.18)")
+print("="*60)
+
+for threat_id, threat in threat_data.items():
+    S_Risk = threat['S_T'] * domain_criticality
+    threat['S_Risk'] = normalize_score(S_Risk)
+    print(f"{threat['name']}: S_Risk={threat['S_Risk']:.3f}")
+
+# ## 10. Итоговая оценка защищённости (формула 2.19)
+
+print("\n" + "="*60)
+print("ШАГ 6: Итоговая оценка защищённости (формула 2.19)")
+print("="*60)
+
+# --- 10.1 Вероятность компрометации ---
+all_attacks = list(attack_data.values())
+if all_attacks:
+    prob_compromise = 1 - np.prod([1 - a['S_Attack'] for a in all_attacks])
+else:
+    prob_compromise = 0
+
+print(f"Вероятность компрометации: {prob_compromise:.3f}")
+
+# --- 10.2 Потенциал негативного воздействия ---
+avg_vuln_score = np.mean([v['danger_score'] for v in vuln_data.values()]) if vuln_data else 0.5
+negative_potential = ALPHA_W * domain_criticality + BETA_W * S_SFC_max * avg_vuln_score
+print(f"Потенциал негативного воздействия: {negative_potential:.3f}")
+
+# --- 10.3 Итоговая оценка (2.19) ---
+Security_Score = (1 / S_Object) * prob_compromise * negative_potential
+Security_Score = normalize_score(Security_Score)
+
+print(f"\n{'='*60}")
+print(f"ИТОГОВАЯ ОЦЕНКА ЗАЩИЩЕННОСТИ")
+print(f"{'='*60}")
+print(f"Security_Score: {Security_Score:.3f}")
+print(f"Уровень защищённости: {get_category(Security_Score)}")
+
+# ## 11. Таблица результатов
+
+print("\n" + "="*60)
+print("ТАБЛИЦА РЕЗУЛЬТАТОВ ПО СФХ")
+print("="*60)
+
+rows = []
+for sfx_id, sfx in sfx_data.items():
+    # Связанные угрозы
+    threats = [t for t in threat_data.values() if sfx_id in t['target_sfx']]
+    S_T_max = max([t['S_T'] for t in threats]) if threats else 0
+    
+    # Связанные уязвимости
+    vulns = [v for v in vuln_data.values() if sfx_id in v['affected_sfx']]
+    avg_vuln = np.mean([v['danger_score'] for v in vulns]) if vulns else 0
+    
+    rows.append({
+        'СФХ': sfx['name'],
+        'Задействованность': round(sfx['I_sfc'], 3),
+        'Отказоустойчивость': round(sfx['fault_tolerance'], 3),
+        'Опасность СФХ (S_SFC)': round(sfx['S_SFC'], 3),
+        'Угроз (связано)': len(threats),
+        'Уязвимостей (связано)': len(vulns),
+        'Макс. опасность угроз': round(S_T_max, 3),
+        'Связанных СФХ': len(sfx['related_sfx'])
+    })
+
+df_results = pd.DataFrame(rows)
+df_results = df_results.sort_values('Опасность СФХ (S_SFC)', ascending=False)
+display(df_results)
+
+# ## 12. Визуализация
+
+# Диаграмма опасности СФХ
+fig, ax = plt.subplots(figsize=(12, 6))
+df_sorted = df_results.sort_values('Опасность СФХ (S_SFC)', ascending=True)
+ax.barh(df_sorted['СФХ'], df_sorted['Опасность СФХ (S_SFC)'], color='skyblue')
+ax.set_xlabel('Уровень опасности СФХ (S_SFC)')
+ax.set_title('Опасность структурно-функциональных характеристик')
+ax.axvline(x=0.82, color='red', linestyle='--', label='Критический уровень')
+ax.legend()
+ax.grid(axis='x', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+# Сравнение показателей
+fig, ax = plt.subplots(figsize=(14, 8))
+x = np.arange(len(df_results))
+width = 0.2
+
+ax.bar(x - width*1.5, df_results['Опасность СФХ (S_SFC)'], width, label='Опасность СФХ', color='#4ECDC4')
+ax.bar(x - width*0.5, df_results['Макс. опасность угроз'], width, label='Опасность угроз', color='#FF6B6B')
+ax.bar(x + width*0.5, df_results['Задействованность'], width, label='Задействованность', color='#FFEAA7')
+
+ax.set_xlabel('СФХ')
+ax.set_ylabel('Значение')
+ax.set_title('Сравнение показателей СФХ')
+ax.set_xticks(x)
+ax.set_xticklabels(df_results['СФХ'], rotation=45, ha='right')
+ax.legend()
+ax.grid(axis='y', linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+# ## 13. Сохранение результатов
+
+# Сохранение в CSV
+df_results.to_csv('security_evaluation_results.csv', index=False, encoding='utf-8')
+print("✅ Результаты сохранены в 'security_evaluation_results.csv'")
+
+# Сохранение итоговой оценки
+with open('security_score_summary.txt', 'w', encoding='utf-8') as f:
+    f.write("="*60 + "\n")
+    f.write("ИТОГОВАЯ ОЦЕНКА ЗАЩИЩЕННОСТИ\n")
+    f.write("="*60 + "\n")
+    f.write(f"S_Object: {S_Object:.3f}\n")
+    f.write(f"S_SFC_max: {S_SFC_max:.3f}\n")
+    f.write(f"Security_Score: {Security_Score:.3f}\n")
+    f.write(f"Уровень защищённости: {get_category(Security_Score)}\n")
+print("✅ Итоговая оценка сохранена в 'security_score_summary.txt'")
